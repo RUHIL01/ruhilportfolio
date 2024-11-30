@@ -146,7 +146,7 @@
             border-radius: 15px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
             width: calc(25% - 20px);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .box-container:hover {
@@ -251,138 +251,123 @@
             transform: scale(1.1);
         }
 
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #0a8e83;
-            color: white;
-            padding: 15px;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            font-size: 1.5rem;
-            display: none;
-        }
+       
 
-        .back-to-top:hover {
-            background-color: #5a9e06;
-        }
+    
+   
+       (max-width :1200px) {
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
 
+            .leftsection {
+                font-size: 2.5rem;
+            }
+
+            .rightsection img {
+                max-width: 80%;
+            }
+
+            #firstsection {
+                flex-direction: column;
+                text-align: center;
+            }
+
+
+          (max-width: 768px) {
+            nav ul {
+                font-size: 1rem;
+            }
+
+            .box-container {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+          
+
+     
+      
     </style>
 </head>
 <body>
 
-<header>
     <nav>
-        <div class="left">Pulkit's Portfolio</div>
+        <div class="left">
+            <a href="#">PULKIT</a>
+        </div>
         <ul>
             <li><a href="#firstsection">Home</a></li>
             <li><a href="#secondsection">About</a></li>
-            <li><a href="#footer">Services</a></li>
-            <li><a href="#contact-form-section">Contact</a></li>
+            <li><a href="#four-boxes-section">Services</a></li>
+            <li><a href="#form-container">Contact</a></li>
         </ul>
     </nav>
-</header>
-
-<main>
+    
     <section id="firstsection">
         <div class="leftsection">
-            Hi, My name is <span class="purple">Pulkit</span>
-            <div>and I am a passionate</div>
-            <span id="element"></span>
+            <h1>Hi, I'm <span class="purple">Pulkit</span></h1>
+            <p>I'm a web developer and designer. I create modern and clean websites and web applications. Let's work together to bring your vision to life!</p>
         </div>
         <div class="rightsection">
-            <img src="developer.png.webp" alt="Developer Image">
+            <img src="developer.png.webp" alt="developer image">
         </div>
     </section>
 
+  
     <section id="secondsection">
-        <span class="text-gray">WHAT AM I NOW</span>
-        <h1>FRESHER</h1>
+        <h1>About Me</h1>
         <div class="box"></div>
-        <p>I, Pulkit, am a student at SGT University</p>
-        <p>Currently learning HTML, CSS</p>
-        <p>Chosen the B.Tech CSE course learning new codes</p>
-        <p>With a keen interest in web development and graphic designing</p>
+        <p class="text-gray">I'm passionate about building scalable and efficient web solutions. I have experience with various programming languages and frameworks, and I love to keep learning new technologies.</p>
     </section>
 
-    <!-- Four Boxes Section -->
     <section id="four-boxes-section">
         <div class="box-container">
             <h2>Web Development</h2>
-            <p>I specialize in front-end and back-end web development, creating responsive and user-friendly websites.</p>
-        </div>
-        <div class="box-container">
-            <h2>Graphic Design</h2>
-            <p>Passionate about graphic design, I create eye-catching visuals for brands and individuals.</p>
+            <p>I build websites with modern technologies like HTML, CSS, JavaScript, React, and Node.js.</p>
         </div>
         <div class="box-container">
             <h2>UI/UX Design</h2>
-            <p>Ensuring a seamless user experience with intuitive and aesthetic interfaces.</p>
+            <p>I design intuitive and user-friendly interfaces that enhance user experience.</p>
         </div>
         <div class="box-container">
-            <h2>SEO Optimization</h2>
-            <p>I help websites rank higher on search engines with tailored SEO strategies.</p>
+            <h2>Branding</h2>
+            <p>Designing brand identities, logos, and visual styles that resonate with audiences.</p>
+        </div>
+        <div class="box-container">
+            <h2>Consulting</h2>
+            <p>Offering insights and advice on optimizing your website or app for performance and scalability.</p>
         </div>
     </section>
 
-    <section id="contact-form-section">
-        <div class="form-container">
-            <h2>Contact Me</h2>
-            <form action="#" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                <input type="submit" value="Send Message">
-            </form>
-        </div>
+    <section id="form-container" class="form-container">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
     </section>
-</main>
 
-<footer>
-    <div>
-        <h3>Pulkit's Developer Portfolio</h3>
+    
+    <footer>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-
+        <div class="rights">© 2024 Pulkit. All Rights Reserved.</div>
         <div id="social">
-            <a href="https://www.instagram.com/r_u_h_i_l_01/profilecard/?igsh=MXUzNThkaDRrajEwcA==" target="_blank">
-                <img src="insta logo.png" alt="Instagram Logo">
-            </a>
-            <a href="https://www.linkedin.com/in/pulkit-ruhil-97131833a" target="_blank">
-                <img src="linked logo.png" alt="LinkedIn Logo">
-            </a>
-            <a href="https://github.com/RUHIL01" target="_blank">
-                <img src="GitHub-Logo.png" alt="GitHub Logo">
-            </a>
-        </div>
-        <div class="rights">
-            Copyright &#169; ruhilportfolio.com | All rights reserved
+            <a href="https://www.instagram.com/r_u_h_i_l_01/?__pwa=1"TARGET=_BLANK><img src="insta logo.png" alt="instagram"></a>
+            <a href="https://github.com/RUHIL01"TARGET=_BLANK><img src="GitHub-Logo.png" alt="github"></a>
+            <a href="https://www.linkedin.com/in/pulkit-ruhil-97131833a/"TARGET=_BLANK><img src="linked logo.png" alt="LinkedIn"></a>
         </div>
     </footer>
-
-    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">&#8593;</div>
-
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['Web Developer', 'and Graphic Designer'],
-            typeSpeed: 50,
-        });
-
-        window.addEventListener('scroll', function() {
-            var button = document.querySelector('.back-to-top');
-            if (window.scrollY > 500) {
-                button.style.display = 'block';
-            } else {
-                button.style.display = 'none';
-            }
-        });
-    </script>
+    <div class="back-to-top">&#8593;</div>
 </body>
 </html>
+
+
